@@ -20,3 +20,6 @@ Open Beats is a simple music player I built while learning web development.
 - Dark/Light theme switching  
 
 This project is part of my journey to understand how real-world music apps like Spotify work under the hood. 🚀  
+
+
+CAN TRY IT WITH :- https://open-beats.vercel.app/
