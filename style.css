@@ -1,0 +1,301 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --bg-color: #ffc7b2;
+    --text-color: #1e1e1e;
+    --primary-color: #ffffff;
+    --secondary-color: #faeabf;
+    --accent-color: #ff9668;
+    --bar-bg: #ffe585;
+    --border-color: #dddddd;
+    --search-bg: #f2f2f2;
+  }
+  
+  /* Dark Theme */
+  :root[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --primary-color: #1f201f;
+    --secondary-color: #1b1b1c;
+    --accent-color: #ff6f61;
+    --bar-bg: #292a29;
+    --border-color: #333333;
+    --search-bg: ##292a29;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    overflow: hidden;
+}
+body{
+    margin:0px;
+    padding: 0px;
+    z-index: 0;
+    background-color: var(--bg-color);
+}
+
+.cointainer{
+    display: flex;
+    width: 98vw;
+    height:calc(100vh - 2vw);
+    margin: 1vw;
+    border-radius: 20px;
+    
+}
+.left{
+    background-color: var(--secondary-color);
+    width: 19vw;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    color: var(--text-color);
+
+}
+.right{
+    background-color: var(--primary-color);
+    width: 79vw;
+    height: 100%;
+    position: relative;
+
+}
+
+.leftui{
+    position: absolute;
+    top: 83px;
+    left: 0;
+    z-index: 1;
+    list-style: none;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 30px;
+    line-height: 45px;
+}
+.leftlogo{
+    width: 25px;
+    border-radius: 50%;
+   
+}
+.lefttext{
+   
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+.leftui li:hover{
+    scale: 1.1;
+    cursor: pointer;
+    -webkit-transform-origin-x: 12px;
+    transition: all 0.3s ease-in-out;
+}
+.leftui li{
+    display: flex;
+    gap: 10px;
+     align-items: center;
+    justify-content: flex-start;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+.logoimg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.logotext{
+    color: var(--text-color);  font-size: 20px;
+    margin-left: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+     font-style: normal;
+
+}
+.searchdiv{
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 14px auto;
+}
+.search{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--search-bg);
+    padding-left: 20px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    border: none;
+}
+.search:focus{
+    outline: none;
+}
+
+.albums{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 36px auto;
+    gap: 80px;
+}
+.album{
+
+    height: 40px;
+    border-radius: 20px; 
+    background-color: var(--secondary-color);
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.album:hover{
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+}
+.select{
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.musics{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 20px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    column-gap: 50px;
+    row-gap: 26px;
+    max-height: 62vh;
+    overflow: scroll;
+    /* align-items: center;
+    justify-content: center; */
+}
+.songimg{
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    font-style: bold;
+
+}
+
+.songname{
+    font-size: 20px;
+    max-width: 180px;
+    overflow-x: hidden;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--text-color);
+    margin-top: 5px;
+    letter-spacing: 0.2px;
+
+}
+
+.artist{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--text-color);
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+}
+.musicplayer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 5vw;
+    background-color: var(--accent-color);
+    display: flex;
+    margin: 20px 20%;
+    flex-direction: row;
+    border-radius: 20px;
+
+}
+.playerimg{
+    display: in;
+    width: 8%;
+    height: 85%;
+    border-radius: 12px;
+    margin-left: 10px;
+    margin-top: 1%;
+}
+.musicname{
+    position: absolute;
+    top:7px;
+    left: 10% ;
+    color: white;
+    font-size: 18px;
+    font-weight: 550;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+  
+}
+.musicartist{
+    position: absolute;
+    top: 32px;
+    left: 10%;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+   
+}
+.controlpanel{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon{
+    width: 40px;
+    margin-left: 10px;
+}
+
+.controlicon-add{
+    margin-left: 60px;
+}
+
+.linebar{
+    position: absolute;
+    bottom: 6px;
+    right: 20px;
+    width: 86%;
+    height: 10%;
+    border-radius: 4px;
+    background-color: var(--bar-bg);
+
+}
+.musicplayer button{
+    all: unset;
+    cursor: pointer;
+}
